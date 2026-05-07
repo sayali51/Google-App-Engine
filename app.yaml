@@ -1,0 +1,17 @@
+runtime: python311
+env: standard
+instance_class: F1
+
+handlers:
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /.*
+    static_files: index.html
+    upload: index.html
+
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  max_instances: 5
